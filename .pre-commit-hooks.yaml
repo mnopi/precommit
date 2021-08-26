@@ -6,3 +6,20 @@
   stages:
     - commit
   pass_filenames: false
+#
+#- id: pip-compile
+#  name: transcrypt
+#  description: pip-compile requirements.txt
+#  entry: ./scripts/transcrypt.sh
+#  language: script
+#  stages:
+#    - commit
+#  pass_filenames: false
+#
+#  - repo: local
+#    hooks:
+#      - id: pip-compile
+#        name: pip-compile requirements
+#        language: system
+#        entry: ./venv/bin/pip-compile -q --no-annotate --allow-unsafe --rebuild --output-file ./requirements/requirements.txt ./setup.cfg
+#        pass_filenames: false

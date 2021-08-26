@@ -17,6 +17,22 @@ repos:
         entry: mkdir -p ./requirements
         pass_filenames: false
 
+  - repo: local
+    hooks:
+      - id: pip-compile
+        name: pip-compile requirements
+        language: system
+        entry: pwd
+        pass_filenames: false
+
+  - repo: local
+    hooks:
+      - id: pip-compile
+        name: pip-compile requirements
+        language: system
+        entry: bash -c "source ./venv/bin/activate && pip-compile -q --no-annotate --allow-unsafe --rebuild --output-file ./requirements/requirements.txt ./setup.cfg"
+        pass_filenames: false
+
   - repo: https://github.com/jazzband/pip-tools
     rev: 6.2.0
     hooks:
