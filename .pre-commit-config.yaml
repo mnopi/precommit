@@ -29,7 +29,7 @@ repos:
           - --rebuild
           - --output-file
           - requirements/requirements.txt
-        files: ./setup.cfg
+        files: ^setup\.cfg$
         pass_filenames: true
 
       - id: pip-compile
@@ -43,8 +43,7 @@ repos:
           - --rebuild
           - --output-file
           - requirements/requirements_dev.txt
-          - setup.cfg
-        files: ./setup.cfg
+        files: ^setup\.cfg$
         pass_filenames: true
 
   - repo: https://github.com/j5pu/precommit
