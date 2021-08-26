@@ -46,8 +46,8 @@ repos:
           - setup.cfg
         files: ./setup.cfg
         pass_filenames: true
-#
-#  - repo: https://github.com/j5pu/precommit
-#    rev: v0.0.2
-#    hooks:
-#      - id: transcrypt
+
+  - repo: https://github.com/j5pu/precommit
+    rev: v0.0.3
+    hooks:
+      - id: transcrypt
