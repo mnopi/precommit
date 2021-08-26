@@ -4,5 +4,5 @@
   entry: scripts/transcript.sh
   language: script
   stages:
-    - pre-commit
+    - commit
   pass_filenames: false
