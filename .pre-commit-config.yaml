@@ -30,7 +30,6 @@ repos:
           - --output-file
           - ./requirements/requirements.txt
           - ./setup.cfg
-        pass_filenames: false
 
       - id: pip-compile
         name: pip-compile dev
@@ -44,7 +43,13 @@ repos:
           - --output-file
           - ./requirements/requirements_dev.txt
           - ./setup.cfg
-        pass_filenames: false
+
+  - repo: https://github.com/jazzband/pip-tools
+    rev: 6.2.0
+    hooks:
+      - id: pip-compile
+        name: pip-compile setup.py
+        files: ^(setup\.cfg)$
 
   - repo: https://github.com/j5pu/precommit
     rev: v0.0.3
