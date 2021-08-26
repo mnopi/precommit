@@ -50,6 +50,7 @@ repos:
       - id: pip-compile
         name: pip-compile setup.py
         files: ^(setup\.cfg)$
+        pass_filenames: True
 
   - repo: https://github.com/j5pu/precommit
     rev: v0.0.3
