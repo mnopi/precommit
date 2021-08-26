@@ -1,7 +1,7 @@
 - id: transcrypt
   name: transcrypt
   description: transparently encrypt files within a git repository
-  entry: ./scripts/transcript.sh
+  entry: ./scripts/transcrypt.sh
   language: script
   stages:
     - commit
