@@ -10,7 +10,7 @@
 - id: pip-compile-requirements
   name: pip-compile requirements.txt
   description: pip-compile requirements.txt
-  entry: python3.9 -m venv ./venv && bash -c "source ./venv/bin/activate && pip-compile -q --no-annotate --allow-unsafe --rebuild --output-file ./requirements/requirements.txt ./setup.cfg"
+  entry: bash -c "python3.9 -m venv ./venv && source ./venv/bin/activate && pip-compile -q --no-annotate --allow-unsafe --rebuild --output-file ./requirements/requirements.txt ./setup.cfg"
   language: system
   stages:
     - commit
@@ -19,7 +19,7 @@
 - id: pip-compile-requirements-dev
   name: pip-compile requirements_dev.txt
   description: pip-compile requirements.txt
-  entry: python3.9 -m venv ./venv && bash -c "source ./venv/bin/activate && pip-compile -q --extra dev --no-annotate --allow-unsafe --rebuild --output-file ./requirements/requirements.txt ./setup.cfg"
+  entry: bash -c "python3.9 -m venv ./venv && source ./venv/bin/activate && pip-compile -q --extra dev --no-annotate --allow-unsafe --rebuild --output-file ./requirements/requirements.txt ./setup.cfg"
   language: system
   stages:
     - commit
