@@ -1,0 +1,27 @@
+[build-system]
+requires = ['setuptools>=57.4', 'setuptools_scm>=6.0', 'wheel>=0.37']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+log_level = 'ERROR'
+python_files = 'test_*.py'
+norecursedirs = ['*.egg', '.eggs', 'dist', 'build', 'docs', '.tox', '.git', '__pycache__', 'backup', 'scripts']
+doctest_optionflags = ['NUMBER', 'NORMALIZE_WHITESPACE', 'IGNORE_EXCEPTION_DETAIL']
+filterwarnings = [
+    'ignore:please use dns.resolver.resolve\(\) instead:DeprecationWarning',
+    'ignore:invalid escape sequence \\:DeprecationWarning',
+    "ignore:private variables, such as '_Name__.*, will be normal attributes in 3.10:DeprecationWarning"
+]
+addopts = [
+    '--ignore-glob=*/backup/*',
+    '--ignore-glob=*.sh',
+    '--ignore-glob=*/test/*',
+    '--ignore-glob=*/tmp/*',
+    '--strict-markers',
+    '--tb=auto',
+    '-rA',
+    '--doctest-modules',
+    '--doctest-continue-on-failure'
+]

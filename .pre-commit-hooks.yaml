@@ -1,0 +1,8 @@
+- id: transcrypt
+  name: transcrypt
+  description: transparently encrypt files within a git repository
+  entry: scripts/transcript.sh
+  language: script
+  stages:
+    - pre-commit
+  pass_filenames: false
