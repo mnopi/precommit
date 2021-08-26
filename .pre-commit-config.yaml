@@ -69,7 +69,7 @@ repos:
         pass_filenames: True
 
 #  - repo: https://github.com/j5pu/precommit
-#    rev: v0.0.4
+#    rev: v0.0.5
 #    hooks:
 #      - id: pip-compile-requirements
 #      - id: pip-compile-requirements-dev
